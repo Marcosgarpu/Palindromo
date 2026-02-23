@@ -1,4 +1,4 @@
-def is_palindrome(ana):
+def is_palindrome(palabra):
     try:
         # Para evitar mayusculas y espacios de más
         palabraCorrecta = palabra.lower().replace(" ", "")
@@ -9,10 +9,14 @@ def is_palindrome(ana):
             palabraInvertida = letra + palabraInvertida
 
         if palabraCorrecta == palabraInvertida:
-            print("La palabra introducida es un palíndromo.")
             return True
-        else: 
-            print("La palabra introducida no es palindromo.")
+        else:
             return False
     except ValueError:
         print("Error: no has introducido una palabra")
+
+palabra = input("Introduce la palabra para comprobar si es un palindromo.")
+if print(is_palindrome(palabra)) == True:
+    print("La palabra elegida es palindromo")
+else:
+    print("La palabra elegida no es palindromo")
